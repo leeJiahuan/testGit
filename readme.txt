@@ -25,4 +25,7 @@ git reset --hard 版本号
 4. git reflog
 获取每次提交的版本号
 
+三、撤销修改和删除文件操作
+
+
 
