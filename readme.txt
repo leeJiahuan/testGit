@@ -62,7 +62,13 @@ ssh-keygen  -t rsa –C “youremail@example.com”
 
 六、创建与合并分支
 注意：HEAD指向的就是当前分支；master才是指向提交。
-1. git checkout -b branchname
+1. 查看分支：git branch
+* 会列出所有的分支，当前分支前面会添加一个星号
+2. 创建分支：git branch branchname
+3. 切换分支：git checkout branchname
+4. 创建并切换分支：git checkout -b branchname
 相当于两条命令：git branch branchname + git checkout branchname
+5. 合并指定分支到当前分支上：git merge otherbranchname
+6. 删除分支：git branch -d branchname
 
 
