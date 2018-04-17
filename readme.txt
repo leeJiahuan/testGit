@@ -57,6 +57,12 @@ ssh-keygen  -t rsa –C “youremail@example.com”
 * 由于远程库是空的，第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 ** 从现在起，只要本地作了提交，就可以通过如下命令：git push origin master；即可把本地master分支的最新修改推送到github上了。
 
+五、克隆远程仓库
+1. git clone https://github.com/leeJiahuan/testGit2.git
 
+六、创建与合并分支
+注意：HEAD指向的就是当前分支；master才是指向提交。
+1. git checkout -b branchname
+相当于两条命令：git branch branchname + git checkout branchname
 
 
