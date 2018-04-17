@@ -69,6 +69,8 @@ ssh-keygen  -t rsa –C “youremail@example.com”
 4. 创建并切换分支：git checkout -b branchname
 相当于两条命令：git branch branchname + git checkout branchname
 5. 合并指定分支到当前分支上：git merge otherbranchname
+* 通常合并分支时，git一般使用”Fast forward”模式，在这种模式下，删除分支后，会丢掉分支信息；
+* 使用 git merge --no-ff  -m "注释" otherbranchname，表示禁用fast forward模式。
 6. 删除分支：git branch -d branchname
 
 
