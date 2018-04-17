@@ -90,6 +90,19 @@ ssh-keygen  -t rsa –C “youremail@example.com”
 10.1. 使用命令 git stash apply 恢复：恢复后，stash内容并不删除，你需要使用命令git stash drop来删除。
 10.2. 使用命令 git stash pop 恢复：恢复的同时把stash内容也删除了。
 
+八、多人协作
+查看远程库的信息：使用 git remote
+查看远程库的详细信息：使用 git remote –v
 
+（一）推送分支
+* 推送分支就是把该分支上所有本地提交到远程库中；推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上。
+* 使用命令 git push origin branchname
+* 一般情况下，那些分支要推送呢？
+** master分支是主分支，因此要时刻与远程同步。
+** 一些修复bug分支不需要推送到远程去，可以先合并到主分支上，然后把主分支master推送到远程去即可。
+
+
+（二）拉取分支
+* 
 
 
