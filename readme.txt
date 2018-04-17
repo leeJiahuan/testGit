@@ -73,4 +73,23 @@ ssh-keygen  -t rsa –C “youremail@example.com”
 * 使用 git merge --no-ff  -m "注释" otherbranchname，表示禁用fast forward模式。
 6. 删除分支：git branch -d branchname
 
+七、隐藏当前工作现场
+假设场景：master 主分支；dev 当前正在进行开发的分支（未add到暂存区）；bugline 从master开的用于修复紧急bug的临时分支
+
+1. 在当前工作分支下将当前的工作现场隐藏起来：(dev)使用命令git stash。
+2. 切换到master分支：(dev)使用命令git checkout master
+3. 创建并切换至一个临时分支：(master)使用命令git checkout -b bugline
+4. 修复bug
+5. add 到暂存区 并 commit：(bugline)使用命令git add XXX.txt + git commit -m "msg"
+6. 修复完成后，切换到主分支上，并完成合并：(bugline)git checkout master + (master)git merge --no-ff -m "msg" bugline
+7. 删除临时分支：(master)使用命令git branch -d bugline
+8. 返回工作分支：(master)使用命令git checkout dev
+* 注意：此时查看工作区是干净的：(dev)使用命令git status
+9. 查看所有被隐藏的文件列表：(dev)使用命令git stash list
+10.恢复工作现场：
+10.1. 使用命令 git stash apply 恢复：恢复后，stash内容并不删除，你需要使用命令git stash drop来删除。
+10.2. 使用命令 git stash pop 恢复：恢复的同时把stash内容也删除了。
+
+
+
 
