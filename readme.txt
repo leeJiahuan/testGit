@@ -4,7 +4,7 @@
 
 2. git add XXX.txt
 把XXX.txt添加到暂存区里面去
-3. git commit -m "xxx"
+3. git commit -m "msg"
 告诉git，把文件提交到仓库
 
 4. git status
@@ -29,6 +29,9 @@ git reset --hard 版本号
 1. git checkout -- XXX.txt
 情况一：add到暂存区 - commit - 修改了 - "撤销修改" - 丢弃工作区的修改，回到和版本库一样的状态（修改之前的状态）
 情况二：add到暂存区 - 修改了 - "撤销修改" - 回到添加暂存区后的状态（修改之前的状态）
+
+2. rm XXX.txt + git commit -m "msg"
+删除文件并从版本库中删除。
 
 
 
