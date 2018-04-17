@@ -33,5 +33,30 @@ git reset --hard 版本号
 2. rm XXX.txt + git commit -m "msg"
 删除文件并从版本库中删除。
 
+四、远程仓库GitHub
+1. 创建SSH Key
+1.1. 在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果有的话，直接跳过此如下命令，如果没有的话，打开命令行，输入如下命令：
+ssh-keygen  -t rsa –C “youremail@example.com”
+1.2. id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+
+2. 登录github,打开”settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容。
+
+3. 如何添加远程库？
+登录github上，然后在右上角找到“create a new repo”创建一个新的仓库。
+
+4. 根据提示和需求，进行需要的操作
+
+
+
+续
+
+假设需求：我们已经在本地创建了一个Git仓库后，又想在github创建一个Git仓库，并且希望这两个仓库进行远程同步，这样github的仓库可以作为备份，又可以其他人通过该仓库来协作。
+操作如下：1. 创建新的仓库 2. 在本地的testgit仓库下运行命令：git remote add origin https://github.com/XXX/YYY.git + git push -u origin master
+注意：
+* 使用 git push 命令，实际上是把当前分支master推送到远程，把本地库的内容推送到远程。
+* 由于远程库是空的，第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+** 从现在起，只要本地作了提交，就可以通过如下命令：git push origin master；即可把本地master分支的最新修改推送到github上了。
+
+
 
 
