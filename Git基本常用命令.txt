@@ -1,0 +1,31 @@
+01. mkdir XXX：创建一个空目录并指定目录名为XXX
+02. pwd：显示当前目录的路径
+03. git init：把当前目录变成可以管理的git仓库，生成隐藏文件.git
+04. git add XXX：把文件XXX添加到暂存区去
+05. git commit -m "msg"：提交文件，-m后面添加注释
+06. git status：查看仓库状态
+07. git diff XXX：查看文件XXX修改了哪些内容
+08. git log：查看历史记录
+09. git reset --hard HEAD^ 或者 git reset --hard HEAD~1：回退到上一个版本
+注意：如果想要回退到第N个版本，使用 git reset --hard HEAD~100
+10. cat XXX：查看文件XXX的内容
+11. git reflog：查看历史记录的版本号ID
+12. git checkout --XXX：把文件XXX在工作去的修改全部撤销
+13. git rm XXX：删除文件XXX
+14. git remote add origin https://XXX/YYY/ZZZ.git ：关联一个远程库
+15. git push [-u（第一次）] origin master：把当前分支master推送至远程库
+16. git clone https://XXX/YYY/ZZZ.git：从远程库中克隆
+17. git checkout -b dev：创建分支dev，并切换到dev分支上
+18. git branch：查看当前所有的分支
+19. git branch XXX：创建XXX分支
+20. git checkout master：切换至master分支
+21. git merge dev：在当前分支上合并dev分支
+22. git branch -d dev：删除dev分支
+23. git stash：把当前的工作隐藏起来，等以后恢复现场后再继续工作
+24. git stash list：查看所有被隐藏的文件列表
+25. git stash apply：恢复被隐藏的文件，但是内容不删除
+26. git stash drop：删除文件
+27. git stash pop：恢复文件的同时也删除文件
+28. git remote：查看远程库的信息
+29. git remote -v：查看远程库的详细信息
+30. git push origin master：git会把master分支推送到远程库对应的远程分支上
