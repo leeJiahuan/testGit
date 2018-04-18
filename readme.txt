@@ -110,6 +110,6 @@ ssh-keygen  -t rsa –C “youremail@example.com”
 
 （二）拉取分支
 * 拉取分支就是把远程的origin的dev分支拉到本地来。
-* 使用命令创建本地dev分支：git checkout  –b dev origin/dev
+* 使用命令创建本地dev分支：git checkout  –b localbranchname origin/branchname
 
 
